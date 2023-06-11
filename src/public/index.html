@@ -1,0 +1,49 @@
+<!--
+  @fileoverview  Rudimentary GUI to demonstrate rental availability search via Redis
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Rental Availability Search Demo</title>
+    <script type="text/javascript" src="search.js"></script>
+    <style>
+        label {
+            display: inline-block;
+            text-align: left;
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Rental Availability Search Demo</h1>
+    <form>
+      <h3>Search by Rental Type, Zip and Availability Date</h3>
+        <label title="Rental Type" for="type">Rental Type</label>
+        <select name="Rental Type" id="type" size="5"> 
+          <option value="office">office</option>
+          <option value="field">field</option>
+          <option value="court" selected>court</option>
+          <option value="classroom">classroom</option>
+          <option value="auditorium">auditorium</option>
+        </select>
+        <br>
+        <label title="ZIP Code" for="zip">ZIP Code</label>
+        <input class="input" id="zip" type="text" value="81501"/>
+        <br>
+        <label title="Radius" for="radius">Radius (mi)</label>
+        <input class="input" id="radius" type="number" value="30"/>
+        <br>
+        <label title="Rental Period Start" for="begin">Rental Period Start</label>
+        <input class="input" id="begin" type="datetime-local"/>
+        <br>
+        <label title="Rental Period End" for="end">Rental Period End</label>
+        <input class="input" id="end" type="datetime-local"/>
+        <br>
+        <button type="submit" formaction="javascript:search()">Submit</button>
+        <br>
+        <p id="results"></p>
+    </form>
+    </body>
+</html>

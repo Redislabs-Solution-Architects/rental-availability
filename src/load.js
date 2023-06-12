@@ -40,13 +40,13 @@ class Loader {
     */
     #getAvailability() {
         let availability = [];
-        const num_dates = Math.floor(Math.random() * 50) + 1;  // up to 50 availability dates
+        const num_dates = 500;//Math.floor(Math.random() * 50) + 1;  // up to 50 availability dates
         let begin = new Date();
         for (let i=0; i < num_dates; i++) {
-            begin.setDate(begin.getDate() + Math.floor(Math.random() * 30));  //random avail begin date up to 30 days from now
+            begin.setDate(begin.getDate() + Math.floor(Math.random() * 30) + 1);  //random avail begin date up to 30 days from begin date
             begin.setHours(Math.floor(Math.random() * 24), 0, 0, 0)  //random hour for that date
             let end = new Date(begin)
-            end.setHours(begin.getHours() + Math.floor(Math.random() * 8))  //random end time.  up to 8 hours after the avail begin
+            end.setHours(begin.getHours() + Math.floor(Math.random() * 8) + 1);  //random end time.  up to 8 hours after the avail begin
             availability.push({"begin": Math.floor(begin.getTime()/1000), "end": Math.floor(end.getTime()/1000)});
             begin = new Date(end);  //establishes an increasing sequence of dates.  non-overlapping
         }

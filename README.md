@@ -65,7 +65,7 @@ end = 1691136000
 	"rate": 306.1
 }"
 ```
-# Search Methodology
+### Search Methodology
 The GUI provides data inputs to allow for search criteria on:
  - Property type
  - Radius from a ZIP code.  Geographic coordinates for US ZIP codes are stored as Redis Strings.

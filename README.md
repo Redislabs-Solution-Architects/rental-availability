@@ -14,7 +14,7 @@
 This is a Javascript-based demo of the Redis Search functionality in property rental domain.  Address data is obtained from a csv file and then supplemented with fictional availability date/time ranges.  
 
 ## Architecture <a name="architecture"></a>
-![architecture](https://docs.google.com/drawings/d/e/2PACX-1vS_WgjjyIfcWUWU13wfYjTb9T7SwBP8SRp1AgkMxrEr8tmwSuRjxf4XDpsfxRYjazJs5p8xHw-zPH3U/pub?w=663&h=380)  
+![architecture](./assets/RentalAvailability_Arch_High.jpg)  
 
 ## Approach <a name="approach"></a>
 ### Data Structure
